@@ -1,8 +1,7 @@
-# Interface
-An interface describes the terms for a particular contract. Any class that signs this contract must adhere to those terms.
+# Encapsulation 
+Encapsulation is about communication.
 
-### QA
-* 06:59 
-    no body, because no make sense, and ~~the fact not little out~~?
-* 08:00
-    handshake 聽不懂
+# Note
+1. 可視度可以修改
+`setAccessible`
+2. 只有內部自己會呼叫的 func 可是度要設 protected 
