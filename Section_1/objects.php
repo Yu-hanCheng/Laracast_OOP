@@ -4,7 +4,8 @@ class Team
     protected $name;
     protected $members =[];
 
-    public function __construct($name , $members){
+    public function __construct($name , $members)
+    {
         $this->name = $name;
         $this->members = $members;
     }
@@ -14,7 +15,8 @@ class Team
         return new self(...$params);
     }
 
-    public function members(){
+    public function members()
+    {
         return $this->members;
     }
 
@@ -23,11 +25,13 @@ class Team
 class Member{
     protected $name;
 
-    public function __construct($name){
+    public function __construct($name)
+    {
         $this->name = $name;
     }
 
-    public function lastViewed(){
+    public function lastViewed()
+    {
 
     }
 }

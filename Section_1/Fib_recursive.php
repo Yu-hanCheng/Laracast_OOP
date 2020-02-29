@@ -1,4 +1,5 @@
 <?php
+
 class Fib
 {
 
@@ -14,6 +15,7 @@ class Fib
     function fibV2($n)
     {
         static $result = array();
+
         if (!isset($result[$n])) {
             if ($n <= 2) {
                 $result[$n] = 1;
