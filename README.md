@@ -1,7 +1,8 @@
-# Abstract
-An abstract class provides a template - or base - for any subclasses.
+# Interface
+An interface describes the terms for a particular contract. Any class that signs this contract must adhere to those terms.
 
 ### QA
-* 類別加上 abstract 後要注意： 
-    1. 不能直接實例化(instantiate)類別
-    2. 可以保留一般 method
+* 06:59 
+    no body, because no make sense, and ~~the fact not little out~~?
+* 08:00
+    handshake 聽不懂

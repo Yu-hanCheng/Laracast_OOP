@@ -1,13 +1,16 @@
 <?php
-
-class CampaignMonitor
+Interface Newsletter
+{
+   public function subscribe($email);
+}
+class CampaignMonitor implements Newsletter
 {
     public function subscribe($email)
     {
         die("subscribe with monitor");
     }
 }
-class Drip
+class Drip implements Newsletter
 {
     public function subscribe($email)
     {
@@ -18,7 +21,7 @@ class Drip
 
 class NewsletterSubscriptionController
 {
-    public function store($newsletter)
+    public function store(Newsletter $newsletter)
     {
         return $newsletter->subscribe("email");
     }
