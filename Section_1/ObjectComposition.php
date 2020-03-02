@@ -2,6 +2,11 @@
 
 class Subscription
 {
+    protected StripeGateway $gateway;
+    public function __construct(StripeGateway $gateway)
+    {
+        $this->gateway = $gateway;
+    }
     public function create()
     {
 
@@ -11,8 +16,7 @@ class Subscription
     {
         // api request
         // find stripe customer id
-        $gateway = new StripeGateway();
-        $gateway-> findStripeCustomer();
+        $this->gateway->findStripeCustomer();
         // find stripe subscription by customer
     }
     public function invoice()
@@ -27,18 +31,19 @@ class Subscription
 
 }
 
-class StripeGateway extends Subscription
+class StripeGateway 
 {
     
-    protected function findStripeCustomer()
+    public function findStripeCustomer()
     {
         echo"findStripeCustomer";
     }
 
-    protected function findStripeSubscriptionByCustomer()
+    public function findStripeSubscriptionByCustomer()
     {
 
     }
 }
-$obj = new Subscription();
+$gateway = new StripeGateway();
+$obj = new Subscription($gateway);
 $obj->cancel();
