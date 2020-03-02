@@ -1,5 +1,9 @@
 <?php
 
+// Avoids primitive obsession - and readability
+// Helps with consistency
+// Immutable
+
 class Age
 {
     private $age;
@@ -12,10 +16,29 @@ class Age
         $this->age = $age;
     }
 
+    public function increment_mutable()
+    {
+        $this->age+=2;
+    }
+
+    public function increment()
+    {
+        return new self($this->age++);
+    }
+
+    public function get()
+    {
+        return $this->age;
+    }
 }
 
-function register(string $name, Age $age)
-{
-    var_dump($age);
-}
-register('sarah',new Age(50));
+$age = new Age(35);
+$age_2 = $age->increment();
+var_dump($age);
+var_dump($age_2);
+
+// function register(string $name, Age $age)
+// {
+//     var_dump($age);
+// }
+// register('sarah',new Age(50));
