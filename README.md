@@ -5,3 +5,4 @@ Object composition IS ABOUT COMMUNICATION.
 1. Option 1: In Class.
 2. Option 2: Inheritance 
 3. Option 3: Object composition 
+4. Option 4: Interface
