@@ -1,8 +1,7 @@
-# Object composition
-Object composition IS ABOUT COMMUNICATION.
+# Value Objects and mutablility
+A value object is an object whose equality is determined by its data (or value) rather than any particular identity. 
 
 # NOTE
-1. Option 1: In Class.
-2. Option 2: Inheritance 
-3. Option 3: Object composition 
-4. Option 4: Interface
+1. Avoids primitive obsession - and readability
+2. Helps with consistency
+3. Immutable

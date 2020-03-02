@@ -42,3 +42,20 @@ var_dump($age_2);
 //     var_dump($age);
 // }
 // register('sarah',new Age(50));
+
+class Coordinates
+{
+    public $x;
+    public $y;
+    
+    public function __construct($x, $y)
+    {
+        $this->x = $x;
+        $this->y = $y;
+    }
+}
+
+function distance(Coordinates $begin, Coordinates $end)
+{
+
+}
