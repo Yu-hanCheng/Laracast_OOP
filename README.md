@@ -1,7 +1,5 @@
-# Encapsulation 
-Encapsulation is about communication.
+# Object composition
+Object composition IS ABOUT COMMUNICATION.
 
-# Note
-1. 可視度可以修改
-`setAccessible`
-2. 只有內部自己會呼叫的 func 可是度要設 protected 
+# NOTE
+1. Option 1:  In Class.
