@@ -10,9 +10,12 @@ class Member
     }
 }
 
-class MaximumMembersReached extends Exception
+class TeamException extends Exception
 {
-
+    public static function fromTooManyMembers()
+    {
+        return new static('You have too many members');
+    }
 }
 
 class Team
@@ -22,7 +25,7 @@ class Team
     public function add(Member $member)
     {
         if (count($this->members) == 3) {
-            throw new MaximumMembersReached('You may not add more than 3 team members');
+            throw TeamException::fromTooManyMembers();
         }
         $this->members[] = $member;
     }
@@ -44,7 +47,7 @@ class TeamMemberController
             $team->add(new Member('Sarah 2'));
             $team->add(new Member('Sarah 3'));
             $team->add(new Member('Sarah 4'));
-        } catch (MaximumMembersReached $e) {
+        } catch (Exception $e) {
             var_dump($e);
         }
         var_dump($team->members());
