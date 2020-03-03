@@ -23,7 +23,7 @@ class Age
 
     public function increment()
     {
-        return new self($this->age++);
+        return new self(++$this->age);
     }
 
     public function get()
@@ -34,28 +34,5 @@ class Age
 
 $age = new Age(35);
 $age_2 = $age->increment();
-var_dump($age);
-var_dump($age_2);
-
-// function register(string $name, Age $age)
-// {
-//     var_dump($age);
-// }
-// register('sarah',new Age(50));
-
-class Coordinates
-{
-    public $x;
-    public $y;
-    
-    public function __construct($x, $y)
-    {
-        $this->x = $x;
-        $this->y = $y;
-    }
-}
-
-function distance(Coordinates $begin, Coordinates $end)
-{
-
-}
+var_dump($age); //36
+var_dump($age_2); //36
