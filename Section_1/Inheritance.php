@@ -11,7 +11,7 @@ class Collection
 
     public function sum($key)
     {
-        return array_sum(array_column($this->items,$key));
+        return array_sum(array_column($this->items, $key));
     }
 }
 
@@ -40,4 +40,3 @@ $collection = new VideoCollection([
     new Video('2',200),
 ]);
 echo $collection->length();
-?>

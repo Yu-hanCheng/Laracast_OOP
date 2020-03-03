@@ -47,7 +47,6 @@ class TeamMemberController
         } catch (MaximumMembersReached $e) {
             var_dump($e);
         }
-
         var_dump($team->members());
     }
 }

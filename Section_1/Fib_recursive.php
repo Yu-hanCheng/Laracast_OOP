@@ -30,16 +30,16 @@ class Fib
 $fib = new Fib(); 
 
 
-$start_time = (float) microtime(true);
+$startTime = (float) microtime(true);
 print($fib->fibV1(20));
-$end_time = (float) microtime(true);
-echo "Spent Time: ", ($end_time - $start_time), "(s)\n";
+$endTime = (float) microtime(true);
+echo "Spent Time: ", ($endTime - $startTime), "(s)\n";
 
 
-$start_time = (float) microtime(true);
+$startTime = (float) microtime(true);
 print($fib->fibV2(20));
-$end_time = (float) microtime(true);
-echo "Spent Time: ", ($end_time - $start_time), "(s)\n";
+$endTime = (float) microtime(true);
+echo "Spent Time: ", ($endTime - $startTime), "(s)\n";
 
 
 ?>

@@ -10,20 +10,20 @@ class Age
 
     public function __construct($age)
     {
-        if ($age<0 || $age > 120) {
+        if ($age < 0 || $age > 120) {
             throw new InvalidArgumentException("That makes no sense", 1);
         }
         $this->age = $age;
     }
 
-    public function increment_mutable()
+    public function incrementMutable()
     {
-        $this->age+=2;
+        $this->age += 2;
     }
 
     public function increment()
     {
-        return new self(++$this->age);
+        return new self(++ $this->age);
     }
 
     public function get()
@@ -33,6 +33,6 @@ class Age
 }
 
 $age = new Age(35);
-$age_2 = $age->increment();
+$age2 = $age->increment();
 var_dump($age); //36
-var_dump($age_2); //36
+var_dump($age2); //36

@@ -3,10 +3,12 @@
 class Subscription
 {
     protected Gateway $gateway;
+
     public function __construct(Gateway $gateway)
     {
         $this->gateway = $gateway;
     }
+
     public function create()
     {
 
@@ -19,16 +21,16 @@ class Subscription
         $this->gateway->findCustomer();
         // find stripe subscription by customer
     }
+
     public function invoice()
     {
 
     }
+
     public function swap()
     {
 
     }
-
-
 }
 
 Interface Gateway
@@ -36,6 +38,7 @@ Interface Gateway
     public function findCustomer();
     public function findSubscriptionByCustomer();
 }
+
 class StripeGateway implements Gateway 
 {
     
@@ -63,6 +66,7 @@ class BraintreeGateway implements Gateway
 
     }
 }
+
 $obj = new Subscription(new StripeGateway());
 $obj->cancel();
 $obj = new Subscription(new BraintreeGateway());

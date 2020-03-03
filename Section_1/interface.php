@@ -1,8 +1,10 @@
 <?php
+
 Interface Newsletter
 {
    public function subscribe($email);
 }
+
 class CampaignMonitor implements Newsletter
 {
     public function subscribe($email)
@@ -10,13 +12,13 @@ class CampaignMonitor implements Newsletter
         die("subscribe with monitor");
     }
 }
+
 class Drip implements Newsletter
 {
     public function subscribe($email)
     {
         die("subscribe with drip");
     }
-
 }
 
 class NewsletterSubscriptionController
@@ -29,4 +31,3 @@ class NewsletterSubscriptionController
 
 $news = new NewsletterSubscriptionController();
 echo $news->store(new Drip());
-?>

@@ -1,4 +1,5 @@
 <?php
+
 class Team
 {
     protected $name;
@@ -19,10 +20,10 @@ class Team
     {
         return $this->members;
     }
-
 }
 
-class Member{
+class Member
+{
     protected $name;
 
     public function __construct($name)
