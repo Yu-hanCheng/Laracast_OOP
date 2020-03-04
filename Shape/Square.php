@@ -12,11 +12,4 @@ class Square
         $this->width = $width;
         $this->height = $height;
     }
-
-    public function areaCalculate()
-    {
-       return $this->width * $this->height;
-    }
 }
-
-echo (new Square(2,4))->areaCalculate();
