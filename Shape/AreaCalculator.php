@@ -5,6 +5,7 @@ namespace Shape;
 
 require_once 'Square.php';
 require_once 'Circle.php';
+require_once 'ShapeInterface.php';
 
 class AreaCalculator
 {
@@ -13,11 +14,7 @@ class AreaCalculator
         $area = [];
 
         foreach ($shapes as $shape){
-           if (is_a($shape, 'Shape\Square')) {
-                $area[] = $shape->width * $shape->height;
-           } elseif (is_a($shape, 'Shape\Circle')) {
-                $area[] = $shape->radius * $shape->radius * pi();
-           }
+            $area[] = $shape->area();
         }
 
         return array_sum($area);

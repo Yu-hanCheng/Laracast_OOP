@@ -2,7 +2,9 @@
 
 namespace Shape;
 
-class Square
+require_once 'ShapeInterface.php';
+
+class Square implements ShapeInterface
 {
     public $width;
     public $height;
@@ -11,5 +13,10 @@ class Square
     {
         $this->width = $width;
         $this->height = $height;
+    }
+
+    public function area()
+    {
+        return $this->width * $this->height;
     }
 }
