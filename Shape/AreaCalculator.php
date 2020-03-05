@@ -9,6 +9,8 @@ require_once 'ShapeInterface.php';
 
 class AreaCalculator
 {
+    private $shapes;
+
     public function calculate($shapes)
     {
         $area = [];
@@ -19,6 +21,20 @@ class AreaCalculator
 
         return array_sum($area);
     }
+
+    public function addElement(ShapeInterface $shape)    
+    {
+        $this->shapes[] = $shape;
+    }
+
+    public function getShapes()
+    {
+        return $this->shapes;
+    }
 }
 
-var_dump((new AreaCalculator())->calculate([new Square(2,4),new Circle(3)]));
+$areaCalculator = new AreaCalculator();
+$areaCalculator->addElement(new Circle(2));
+$areaCalculator->addElement(new Square(2,3));
+
+var_dump($areaCalculator->calculate($areaCalculator->getShapes()));
