@@ -18,6 +18,7 @@ class Bar extends Foo
     public static $my_static = 'bar';
 
     public function fooValue() {
+        parent::$my_static = "parent";
         return parent::$my_static;
     }
 
@@ -31,9 +32,9 @@ class Bar extends Foo
 }
 
 $bar = new Bar();
+print $bar->fooValue() . "\n";
 print $bar->selfValue() . "\n";
 print $bar->staticValue() . "\n";
-print $bar->fooValue() . "\n";
 print $bar->barSelfValue() . "\n";
 print $bar->barStaticValue() . "\n";
 ?>
